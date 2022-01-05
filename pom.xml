@@ -10,7 +10,7 @@
         <relativePath/>
     </parent>
 
-    <groupId>fr.eql.al35</groupId>
+    <groupId>org.eql.al35</groupId>
     <artifactId>Favorite</artifactId>
     <version>1.0</version>
     <name>Favorite</name>
@@ -68,6 +68,11 @@
             <artifactId>junit</artifactId>
             <version>4.12</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>fr.eql.al35</groupId>
+            <artifactId>Favorite</artifactId>
+            <version>1.0</version>
         </dependency>
     </dependencies>
 
