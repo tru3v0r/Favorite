@@ -47,7 +47,7 @@ public class ProductService implements ProductIService {
 	@Override
 	public Product displayProductById(int id) {
 		Optional<Product> product = productRepository.findById(id);
-		return product.isPresent() ? product.get() : null;
+		return product.orElse(null);
 	}
 
 	@Override
