@@ -15,13 +15,13 @@
 		<div class="row">
 			<h3 class="no-article" th:if="${commands.size == 0}">Aucune commande trouv&eacute;e</h3>
 			<div class="accordion" id="accordionExample">
-				<div class="card" th:each="command : ${commands}">	
+				<div class="card" th:each="command : ${commands}">
 					<div class="card-header" th:id="'heading' + ${command.id}">
 						<h2 class="mb-0">
-							<button class="btn btn-link" type="button" data-toggle="collapse" 
+							<button class="btn btn-link" type="button" data-toggle="collapse"
 							th:attr="data-target='#collapse' + ${command.id}" aria-expanded="true"
 								aria-controls="TooooOTO" id="boutonHeader">
-								<b>Commande n° : </b>
+								<strong>Commande n° : </strong>
 								<span th:text="${command.reference}"></span>
 							</button>
 						</h2>
@@ -30,11 +30,11 @@
 						<div class="card-body">
 							<div id="dateCommande" style="_text-align: center">
 								<div class="paraphContent">
-									<b>Commande pass&eacute;e le :</b> <span
+									<strong>Commande pass&eacute;e le :</strong> <span
 										th:text="${#temporals.format(command.creationDate, 'dd-MMMM-yyyy', new java.util.Locale('fr', 'FR'))}"></span>
 								</div>
 								<div class="paraphContent">
-									<b>Montant de la commande :</b> <span class="price"
+									<strong>Montant de la commande :</strong> <span class="price"
 										th:text="${command.taxInPrice} + ' €'"> </span>
 								</div>
 								<div class="paraphContent">
