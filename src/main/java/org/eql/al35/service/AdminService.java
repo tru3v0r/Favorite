@@ -28,37 +28,37 @@ public class AdminService implements AdminIService {
 
 	@Autowired
 	/**
-	* Javadoc comment
+	* Javadoc comment.
 	*/
 	StatusIRepository statusRepo;
 
 	@Autowired
 	/**
-	* Javadoc comment
+	* Javadoc comment.
 	*/
 	UserIRepository userRepo;
 
 	@Autowired
 	/**
-	* Javadoc comment
+	* Javadoc comment.
 	*/
 	GenderIRepository genderRepo;
 
 	@Autowired
 	/**
-	* Javadoc comment
+	* Javadoc comment.
 	*/
 	UserTypeIRepo userTypeRepo;
 
 	@Autowired
 	/**
-	* Javadoc comment
+	* Javadoc comment.
 	*/
 	VatIRepository vatRepo;
 
 	@Autowired
 	/**
-	* Javadoc comment
+	* Javadoc comment.
 	*/
 	PayModeIRepository payModeRepo;
 

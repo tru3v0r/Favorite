@@ -16,7 +16,7 @@ public class ProductController {
 
 	@Autowired
 	/**
-	* Javadoc comment
+	* Javadoc comment.
 	*/
 	private ProductIService productService;
 
@@ -25,7 +25,7 @@ public class ProductController {
 
 	@GetMapping("/products/all")
 	/**
-	 * Javadoc comment
+	 * Javadoc comment.
 	 */
 	public String displayAllProducts(Model model) {
 		model.addAttribute("products", productService.displayAvailableProducts());
@@ -38,7 +38,7 @@ public class ProductController {
 
 	@GetMapping("/products/{category}/{id}")
 	/**
-	 * Javadoc comment
+	 * Javadoc comment.
 	 */
 	public String displayProduct(@PathVariable String category, @PathVariable Integer id, Model model) {
 
@@ -52,7 +52,7 @@ public class ProductController {
 	}
 	@GetMapping("/products/{productType}")
 	/**
-	 * Javadoc comment
+	 * Javadoc comment.
 	 */
 	public String displayProductsByType(@PathVariable ProductType productType, Model model) {
 		model.addAttribute(CATEGORIES_ATTR, productService.displayAllCategories());

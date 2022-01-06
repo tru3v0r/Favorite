@@ -12,7 +12,7 @@ public class StockService implements StockIService {
 
 	@Autowired
 	/**
-	* Javadoc comment
+	* Javadoc comment.
 	*/
 	private StockIRepository stockRepository;
 

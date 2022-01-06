@@ -27,17 +27,17 @@ public class CartController {
 
 	@Autowired
 	/**
-	* Javadoc comment
+	* Javadoc comment.
 	*/
 	private CartIService cartService;
 	@Autowired
 	/**
-	* Javadoc comment
+	* Javadoc comment.
 	*/
 	private ArticleIService articleService;
 	@Autowired
 	/**
-	* Javadoc comment
+	* Javadoc comment.
 	*/
 
 	private CustomIService customService;
@@ -45,7 +45,7 @@ public class CartController {
 	private static final String SESSION_CART = "sessionCart";
 	@PostMapping("/addToCart")
 	/**
-	 * Javadoc comment
+	 * Javadoc comment.
 	 */
 	public String displayAddToCart(@ModelAttribute("article") Article article, @RequestParam("idProduct") Integer idProduct,
 			HttpSession session) {
@@ -65,7 +65,7 @@ public class CartController {
 
 	@PostMapping("/addCustomArticleToCart")
 	/**
-	 * Javadoc comment
+	 * Javadoc comment.
 	 */
 	public String displayAddCustomArticleToCart(@ModelAttribute("article") Article article, @RequestParam("idProduct") Integer idProduct,
 			@RequestParam("idCustom1") Integer idCustom1 ,
@@ -94,7 +94,7 @@ public class CartController {
 
 	@GetMapping("/cart")
 	/**
-	 * Javadoc comment
+	 * Javadoc comment.
 	 */
 	public String displayCart( Model model,
 			HttpSession session) {
@@ -109,7 +109,7 @@ public class CartController {
 
 	@PostMapping("/cart")
 	/**
-	 * Javadoc comment
+	 * Javadoc comment.
 	 */
 	public String displayDeleteArticle(@RequestParam("index") Integer index, HttpSession session) {
 		Cart sessionCart = (Cart) session.getAttribute(SESSION_CART);

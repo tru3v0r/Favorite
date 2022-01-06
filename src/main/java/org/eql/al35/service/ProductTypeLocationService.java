@@ -16,7 +16,7 @@ public class ProductTypeLocationService implements ProductTypeLocationIService {
 
     @Autowired
 	/**
-	* Javadoc comment
+	* Javadoc comment.
 	*/
     private ProductTypeLocationIRepository productTypeLocationIRepository;
 

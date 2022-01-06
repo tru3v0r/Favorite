@@ -27,19 +27,19 @@ public class ProductService implements ProductIService {
 
 	@Autowired
 	/**
-	* Javadoc comment
+	* Javadoc comment.
 	*/
 	private ProductIRepository productRepository;
 
 	@Autowired
 	/**
-	* Javadoc comment
+	* Javadoc comment.
 	*/
 	private ProductTypeIRepository productTypeRepository;
 
 	@Autowired
 	/**
-	* Javadoc comment
+	* Javadoc comment.
 	*/
 	private DesignIRepository designRepository;
 

@@ -23,7 +23,7 @@ Class cointaining main from which app launches
 			FavoriteApplication.class);
 
 	/**
-	 * Javadoc comment
+	 * Javadoc comment.
 	 */
 	public static void main(final String[] args) {
 		SpringApplication.run(FavoriteApplication.class, args);

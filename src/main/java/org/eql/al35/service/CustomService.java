@@ -18,12 +18,12 @@ public class CustomService implements CustomIService {
 
 	@Autowired
 	/**
-	* Javadoc comment
+	* Javadoc comment.
 	*/
 	private ProductTypeLocationIRepository productTypeLocationRepo;
 	@Autowired
 	/**
-	* Javadoc comment
+	* Javadoc comment.
 	*/
 	private DesignIRepository designRepo;
 

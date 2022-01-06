@@ -14,7 +14,7 @@ public class DesignService implements DesignIService{
 
 	@Autowired
 	/**
-	* Javadoc comment
+	* Javadoc comment.
 	*/
 	private DesignIRepository designRepo;
 

@@ -29,37 +29,37 @@ public class AdminController {
 
 	@Autowired
 	/**
-	* Javadoc comment
+	* Javadoc comment.
 	*/
 	private ProductIService productService;
 
 	@Autowired
 	/**
-	* Javadoc comment
+	* Javadoc comment.
 	*/
 	private CommandIService commandService;
 
 	@Autowired
 	/**
-	* Javadoc comment
+	* Javadoc comment.
 	*/
 	private AdminIService adminService;
 
 	@Autowired
 	/**
-	* Javadoc comment
+	* Javadoc comment.
 	*/
 	private AccountIService accountService;
 
 	@Autowired
 	/**
-	* Javadoc comment
+	* Javadoc comment.
 	*/
 	private PhotoIService photoService;
 
 	@Autowired
 	/**
-	* Javadoc comment
+	* Javadoc comment.
 	*/
 	private StockIService stockService;
 
@@ -68,7 +68,7 @@ public class AdminController {
 
 	@GetMapping("/admin/product")
 	/**
-	 * Javadoc comment
+	 * Javadoc comment.
 	 */
 	public String displayAdminProduct( Model model) {
 		model.addAttribute(PRODUCTS_ATTR, productService.displayAllProducts());
@@ -77,7 +77,7 @@ public class AdminController {
 
 	@GetMapping("/admin/users")
 	/**
-	 * Javadoc comment
+	 * Javadoc comment.
 	 */
 	public String displayUsers(Model model) {
 		model.addAttribute("users", adminService.displayAllUsers());
@@ -86,7 +86,7 @@ public class AdminController {
 
 	@GetMapping("/admin/users/{id}")
 	/**
-	 * Javadoc comment
+	 * Javadoc comment.
 	 */
 	public String displayUser(@PathVariable Integer id, Model model) {
 		model.addAttribute("user", adminService.displayUser(id));
@@ -97,7 +97,7 @@ public class AdminController {
 
 	@PostMapping("/admin/user/{id}/unsubscribe")
 	/**
-	 * Javadoc comment
+	 * Javadoc comment.
 	 */
 	public String unsubscribeUser(@PathVariable Integer id, @ModelAttribute("user")User user, Model model) {
 		user.setUnsubscribingDate(LocalDateTime.now());
@@ -107,7 +107,7 @@ public class AdminController {
 
 	@PostMapping("/admin/user/{id}/subscribe")
 	/**
-	 * Javadoc comment
+	 * Javadoc comment.
 	 */
 	public String subscribeUser(@PathVariable Integer id, @ModelAttribute("user")User user, Model model) {
 		user.setUnsubscribingDate(null);
@@ -117,7 +117,7 @@ public class AdminController {
 
 	@PostMapping("/updateUser/{id}")
 	/**
-	 * Javadoc comment
+	 * Javadoc comment.
 	 */
 	public String updateUser(@PathVariable Integer id,
 							 @ModelAttribute("user")User user,
@@ -128,7 +128,7 @@ public class AdminController {
 
 	@GetMapping("/admin/commands/{id}")
 	/**
-	 * Javadoc comment
+	 * Javadoc comment.
 	 */
 	public String displayCommand(@PathVariable Integer id, Model model) {
 		model.addAttribute("command", commandService.displaybyId(id));
@@ -137,7 +137,7 @@ public class AdminController {
 
 	@GetMapping("/admin/home")
 	/**
-	 * Javadoc comment
+	 * Javadoc comment.
 	 */
 	public String redirectAdminHome( Model model) {
 		return "adminHome";
@@ -145,7 +145,7 @@ public class AdminController {
 
 	@PostMapping("/upDateProducts")
 	/**
-	 * Javadoc comment
+	 * Javadoc comment.
 	 */
 	public String upDateProducts(@ModelAttribute(PRODUCTS_ATTR)Product product, @RequestParam("idProduct") Integer idProduct, Model model) {
 		model.addAttribute(PRODUCT_TYPES_ATTR, productService.displayAllCategories());
@@ -156,7 +156,7 @@ public class AdminController {
 
 	@PostMapping("/upDateStock")
 	/**
-	 * Javadoc comment
+	 * Javadoc comment.
 	 */
 	public String upDateStock(@ModelAttribute("stock")Stock stock, @RequestParam("idStock") Integer idStock, @RequestParam("idProduct") Integer idProduct,
 			@RequestParam String sizeLabel, Model model) {
@@ -179,7 +179,7 @@ public class AdminController {
 
 	@PostMapping("/upDatePhotos")
 	/**
-	 * Javadoc comment
+	 * Javadoc comment.
 	 */
 	public String upDatePhoto(@ModelAttribute("photo")Photo photo,
 							  @RequestParam("idPhoto") Integer idPhoto,
@@ -196,7 +196,7 @@ public class AdminController {
 
 	@GetMapping("/admin/command")
 	/**
-	 * Javadoc comment
+	 * Javadoc comment.
 	 */
 	public String displayAdminCommand( Model model) {
 		model.addAttribute("commands", commandService.displayAllCommands());
@@ -209,7 +209,7 @@ public class AdminController {
 
 	@PostMapping("/upDateCommands")
 	/**
-	 * Javadoc comment
+	 * Javadoc comment.
 	 */
 	public String upDateCommands(@ModelAttribute("command")Command command, Model model) {
 		commandService.updateCommand(command);
@@ -223,7 +223,7 @@ public class AdminController {
 
 	@GetMapping("/admin/products/{id}")
 	/**
-	 * Javadoc comment
+	 * Javadoc comment.
 	 */
 	public String displayProduct(@PathVariable Integer id, Model model) {
 		Stock stock = new Stock();
@@ -235,7 +235,7 @@ public class AdminController {
 	}
 	@GetMapping("/admin/products/delete/{id}")
 	/**
-	 * Javadoc comment
+	 * Javadoc comment.
 	 */
 	public String deleteProduct(@PathVariable Integer id, Model model) {
 		model.addAttribute(PRODUCTS_ATTR, productService.displayAllProducts());
@@ -245,7 +245,7 @@ public class AdminController {
 
 	@GetMapping("/admin/product/add")
 	/**
-	 * Javadoc comment
+	 * Javadoc comment.
 	 */
 	public String adminAddProduct( Model model) {
 		Product product = new Product();
@@ -257,7 +257,7 @@ public class AdminController {
 
 	@PostMapping("/addProduct")
 	/**
-	 * Javadoc comment
+	 * Javadoc comment.
 	 */
 	public String addProduct(@ModelAttribute(PRODUCTS_ATTR)Product product, Model model) {
 		productService.addProduct(product);

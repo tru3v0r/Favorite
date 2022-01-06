@@ -27,19 +27,19 @@ public class PaymentController {
 
 	@Autowired
 	/**
-	* Javadoc comment
+	* Javadoc comment.
 	*/
 	CommandIService cmdService;
 
 	@Autowired
 	/**
-	* Javadoc comment
+	* Javadoc comment.
 	*/
 	AccountIService accountService;
 
 	@GetMapping("/payment")
 	/**
-	 * Javadoc comment
+	 * Javadoc comment.
 	 */
 	public String displayPayment(Model model, HttpSession session) {
 		Command command = new Command();
@@ -49,7 +49,7 @@ public class PaymentController {
 
 	@PostMapping("/newCommand")
 	/**
-	 * Javadoc comment
+	 * Javadoc comment.
 	 */
 	public String createNewCommand(Model model, HttpSession session,
 			@ModelAttribute("command") Command command) {

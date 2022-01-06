@@ -23,7 +23,7 @@ public class Address implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * Javadoc comment
+	 * Javadoc comment.
 	 */
 	@Id
 	@GeneratedValue (strategy = GenerationType.IDENTITY)

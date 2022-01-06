@@ -23,13 +23,13 @@ import org.eql.al35.repository.ProductIRepository;
 public class PhotoService implements PhotoIService {
 	@Autowired
 	/**
-	* Javadoc comment
+	* Javadoc comment.
 	*/
 	PhotoIRepository photoRepo;
 
 	@Autowired
 	/**
-	* Javadoc comment
+	* Javadoc comment.
 	*/
 	ProductIRepository productRepo;
 

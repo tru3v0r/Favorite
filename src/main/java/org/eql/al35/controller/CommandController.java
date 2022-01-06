@@ -20,7 +20,7 @@ public class CommandController {
 
 	@Autowired
 	/**
-	* Javadoc comment
+	* Javadoc comment.
 	*/
 	private CommandIService commandService;
 
@@ -28,7 +28,7 @@ public class CommandController {
 
 	@GetMapping("/myOrders")
 	/**
-	 * Javadoc comment
+	 * Javadoc comment.
 	 */
 	public String userCommands(Model model, HttpSession session) {
 		User sessionUser = (User) session.getAttribute("sessionUser");
@@ -40,7 +40,7 @@ public class CommandController {
 
 	@GetMapping("/order/{id}")
 	/**
-	 * Javadoc comment
+	 * Javadoc comment.
 	 */
 	public String displayCommand(@PathVariable Integer id, Model model, HttpSession session) {
 		String retour = "";

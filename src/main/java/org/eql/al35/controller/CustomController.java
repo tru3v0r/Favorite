@@ -19,13 +19,13 @@ public class CustomController {
 
 	@Autowired
 	/**
-	* Javadoc comment
+	* Javadoc comment.
 	*/
 	private ProductIService productService;
 
 	@Autowired
 	/**
-	* Javadoc comment
+	* Javadoc comment.
 	*/
 	private DesignIService designService;
 	private Size size;
@@ -33,7 +33,7 @@ public class CustomController {
 
 	@PostMapping("/generateCustom")
 	/**
-	 * Javadoc comment
+	 * Javadoc comment.
 	 */
 	public String displayGenrateCustom(@ModelAttribute("article") Article article, @RequestParam("idProduct") Integer idProduct,
 			 Model model) {
@@ -47,7 +47,7 @@ public class CustomController {
 
 	@GetMapping("/custom/{category}/{id}")
 	/**
-	 * Javadoc comment
+	 * Javadoc comment.
 	 */
 	public String displayCustom(@PathVariable String category, @PathVariable Integer id, Model model) {
 

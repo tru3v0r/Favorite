@@ -22,7 +22,7 @@ public class ArticleService implements ArticleIService{
 
 	@Autowired
 	/**
-	* Javadoc comment
+	* Javadoc comment.
 	*/
 	private ProductIRepository productRepo;
 

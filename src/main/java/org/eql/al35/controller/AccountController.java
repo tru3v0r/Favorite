@@ -16,28 +16,28 @@ import javax.servlet.http.HttpSession;
 @Controller
 @SessionAttributes({"sessionCart", "sessionUser"})
 /**
- * Javadoc comment
+ * Javadoc comment.
  */
 public class AccountController {
 
 	@Autowired
 	/**
-	* Javadoc comment
+	* Javadoc comment.
 	*/
 	private AccountIService accountService;
 
 	private static final String SESSION_USER_ATTR = "sesionUser";
 	/**
-	 * Javadoc comment
+	 * Javadoc comment.
 	 */
 	private static final String SESSION_CART_ATTR = "sesionCart";
 	/**
-	 * Javadoc comment
+	 * Javadoc comment.
 	 */
 
 	@GetMapping({"/", "/home"})
 	/**
-	 * Javadoc comment
+	 * Javadoc comment.
 	 */
 	public String displayHome(final Model model) {
 
@@ -50,7 +50,7 @@ public class AccountController {
 
 	@GetMapping("/switchAdmin")
 	/**
-	 * Javadoc comment
+	 * Javadoc comment.
 	 */
     public String switchAdminAccount(final Model model, final HttpSession session) {
 
@@ -64,7 +64,7 @@ public class AccountController {
 
 	@GetMapping("/switchUser")
 	/**
-	 * Javadoc comment
+	 * Javadoc comment.
 	 */
 	public String switchUser3Account(final Model model, final HttpSession session) {
 
@@ -90,7 +90,7 @@ public class AccountController {
 
 	@PostMapping("/goodbye")
 	/**
-	 * Javadoc comment
+	 * Javadoc comment.
 	 */
 	public String close(SessionStatus status) {
 		status.setComplete();
