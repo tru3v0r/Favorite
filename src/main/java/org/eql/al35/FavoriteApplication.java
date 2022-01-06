@@ -15,9 +15,9 @@ import org.springframework.context.event.EventListener;
 
 @SpringBootApplication
 public class FavoriteApplication {
-	/*
-	Class cointaining main from which app launches
-	 */
+/*
+Class cointaining main from which app launches
+ */
 
 	private static Logger log = LoggerFactory.getLogger(FavoriteApplication.class);
 

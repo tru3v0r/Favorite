@@ -37,8 +37,8 @@
 		            	<div class="product-grid mx-1 my-2">
 			                <div class="product-image">
 				                <a th:href="@{'/products/' + ${product.productType.name} + '/{id}'(id=${product.id})}"> 
-				                	<img class="pic-1" th:src="@{'/photos/product/' + ${product.photos[0].path}}">
-				                	<img class="pic-2" th:src="@{'/photos/product/' + ${product.photos[1].path}}">
+				                	<img class="pic-1" th:src="@{'/photos/product/' + ${product.photos[0].path}}" alt="Product picture 1">
+				                	<img class="pic-2" th:src="@{'/photos/product/' + ${product.photos[1].path}}" alt="Product picture 2">
 				                </a>
 				                <span class="soldout" th:if="${product.quantity == 0}">Rupture de Stock</span>
 			                </div>
