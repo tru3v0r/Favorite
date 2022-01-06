@@ -32,8 +32,10 @@ Class cointaining main from which app launches
 	}
 
 	public static void openBrowser(String url) {
-
-	    if (Desktop.isDesktopSupported()){
+		/**
+		 * Opens the app in default browser
+		 */
+	    if (Desktop.isDesktopSupported()) {
 	        Desktop desktop = Desktop.getDesktop();
 	        try {
 	            desktop.browse(new URI(url));
