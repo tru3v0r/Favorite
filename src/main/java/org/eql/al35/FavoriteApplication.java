@@ -25,7 +25,8 @@ Class cointaining main from which app launches
 		SpringApplication.run(FavoriteApplication.class, args);
 	}
 
-	//Lorsque l'ensemble des config sont finalisée = lancement du navigateur sur l'url défini
+	//Lorsque l'ensemble des config sont finalisée = lancement du navigateur
+	// sur l'url défini
 	@EventListener({ApplicationReadyEvent.class})
 	static void applicationReadyEvent() {
 	    openBrowser("http://localhost:8085/home");
