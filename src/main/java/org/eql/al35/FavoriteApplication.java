@@ -31,7 +31,7 @@ Class cointaining main from which app launches
 	    openBrowser("http://localhost:8085/home");
 	}
 
-	public static void openBrowser(String url) {
+	public static void openBrowser(final String url) {
 		/**
 		 * Opens the app in default browser
 		 */
