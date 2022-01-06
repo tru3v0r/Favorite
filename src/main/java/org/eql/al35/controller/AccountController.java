@@ -15,19 +15,32 @@ import javax.servlet.http.HttpSession;
 
 @Controller
 @SessionAttributes({"sessionCart", "sessionUser"})
+/**
+ * Javadoc comment
+ */
 public class AccountController {
 
 	@Autowired
+	/**
+	* Javadoc comment
+	*/
 	private AccountIService accountService;
 
 	private static final String SESSION_USER_ATTR = "sesionUser";
+	/**
+	 * Javadoc comment
+	 */
 	private static final String SESSION_CART_ATTR = "sesionCart";
-
+	/**
+	 * Javadoc comment
+	 */
 
 	@GetMapping({"/", "/home"})
-	public String displayHome(Model model) {
+	/**
+	 * Javadoc comment
+	 */
+	public String displayHome(final Model model) {
 
-		//Utilisateur 3 en dur en session (pour ne pas avoir à créer de compte)
 		User user3 = accountService.getUser3();
 		model.addAttribute(SESSION_USER_ATTR, user3);
         sessionCartGenerator(model, null);
@@ -36,7 +49,10 @@ public class AccountController {
 	}
 
 	@GetMapping("/switchAdmin")
-    public String switchAdminAccount(Model model, HttpSession session) {
+	/**
+	 * Javadoc comment
+	 */
+    public String switchAdminAccount(final Model model, final HttpSession session) {
 
         User admin = accountService.getAdminAccount();
         model.addAttribute(SESSION_USER_ATTR, admin);
@@ -47,7 +63,10 @@ public class AccountController {
     }
 
 	@GetMapping("/switchUser")
-	public String switchUser3Account(Model model, HttpSession session) {
+	/**
+	 * Javadoc comment
+	 */
+	public String switchUser3Account(final Model model, final HttpSession session) {
 
 		User user3 = accountService.getUser3();
 		model.addAttribute(SESSION_USER_ATTR, user3);
@@ -57,8 +76,8 @@ public class AccountController {
 		return "home";
 	}
 
-	private void sessionCartGenerator(Model model, Cart sessionCart) {
-		if(sessionCart == null) {
+	private void sessionCartGenerator(final Model model, final Cart sessionCart) {
+		if (sessionCart == null) {
 			Cart cart = new Cart();
 			cart.setArticlesQuantity(0);
 			cart.setPrice(0.0);
@@ -70,6 +89,9 @@ public class AccountController {
 	}
 
 	@PostMapping("/goodbye")
+	/**
+	 * Javadoc comment
+	 */
 	public String close(SessionStatus status) {
 		status.setComplete();
 		return "home";

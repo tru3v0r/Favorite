@@ -21,6 +21,9 @@ import org.eql.al35.repository.ProductIRepository;
 public class ArticleService implements ArticleIService{
 
 	@Autowired
+	/**
+	* Javadoc comment
+	*/
 	private ProductIRepository productRepo;
 
 
@@ -28,7 +31,7 @@ public class ArticleService implements ArticleIService{
 	public void addProduit(Integer id, Article article) {
 		Optional<Product> product = productRepo.findById(id);
 
-		if(product.isPresent()) {
+		if (product.isPresent()) {
 			article.setProduct(product.get());
 			article.setPrice(product.get().getPrice());
 		}

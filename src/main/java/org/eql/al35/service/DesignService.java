@@ -13,6 +13,9 @@ import org.eql.al35.repository.DesignIRepository;
 public class DesignService implements DesignIService{
 
 	@Autowired
+	/**
+	* Javadoc comment
+	*/
 	private DesignIRepository designRepo;
 
 	@Override

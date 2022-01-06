@@ -26,12 +26,21 @@ import org.eql.al35.repository.ProductTypeIRepository;
 public class ProductService implements ProductIService {
 
 	@Autowired
+	/**
+	* Javadoc comment
+	*/
 	private ProductIRepository productRepository;
 
 	@Autowired
+	/**
+	* Javadoc comment
+	*/
 	private ProductTypeIRepository productTypeRepository;
 
 	@Autowired
+	/**
+	* Javadoc comment
+	*/
 	private DesignIRepository designRepository;
 
 	@Override
@@ -78,7 +87,7 @@ public class ProductService implements ProductIService {
 	@Override
 	public void setDeleteProduct(Integer id) {
 		Optional<Product> product = productRepository.findById(id);
-		if(product.isPresent()) {
+		if (product.isPresent()) {
 			product.get().setRefDeletionDate(LocalDateTime.now());
 		}
 	}

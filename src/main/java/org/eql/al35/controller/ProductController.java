@@ -15,12 +15,18 @@ import org.eql.al35.iservice.ProductIService;
 public class ProductController {
 
 	@Autowired
+	/**
+	* Javadoc comment
+	*/
 	private ProductIService productService;
 
 	private static final String CATEGORIES_ATTR = "categories";
 
 
 	@GetMapping("/products/all")
+	/**
+	 * Javadoc comment
+	 */
 	public String displayAllProducts(Model model) {
 		model.addAttribute("products", productService.displayAvailableProducts());
 		model.addAttribute(CATEGORIES_ATTR, productService.displayAllCategories());
@@ -31,6 +37,9 @@ public class ProductController {
 	}
 
 	@GetMapping("/products/{category}/{id}")
+	/**
+	 * Javadoc comment
+	 */
 	public String displayProduct(@PathVariable String category, @PathVariable Integer id, Model model) {
 
 		Article article = new Article();
@@ -42,16 +51,14 @@ public class ProductController {
 		return "productSheet";
 	}
 	@GetMapping("/products/{productType}")
+	/**
+	 * Javadoc comment
+	 */
 	public String displayProductsByType(@PathVariable ProductType productType, Model model) {
 		model.addAttribute(CATEGORIES_ATTR, productService.displayAllCategories());
 		model.addAttribute("products", productService.displayByProductType(productType));
 		model.addAttribute("productType", productType);
 		return "showcase";
 	}
-
-
-
-
-
 
 }

@@ -23,6 +23,9 @@ public class MyFileUploadController {
 
    // GET: Show upload form page.
    @GetMapping(value = "/uploadOneFile")
+   /**
+    * Javadoc comment
+    */
    public String uploadOneFileHandler(Model model) {
 
       MyUploadForm myUploadForm = new MyUploadForm();
@@ -33,6 +36,9 @@ public class MyFileUploadController {
 
    // POST: Do Upload
    @PostMapping(value = "/uploadOneFile")
+   /**
+    * Javadoc comment
+    */
    public String uploadOneFileHandlerPOST(Model model,
          @ModelAttribute("myUploadForm") MyUploadForm myUploadForm) {
 
@@ -42,6 +48,9 @@ public class MyFileUploadController {
 
    // GET: Show upload form page.
    @GetMapping(value = "/uploadMultiFile")
+   /**
+    * Javadoc comment
+    */
    public String uploadMultiFileHandler(Model model) {
 
       MyUploadForm myUploadForm = new MyUploadForm();
@@ -52,6 +61,9 @@ public class MyFileUploadController {
 
    // POST: Do Upload
    @PostMapping(value = "/uploadMultiFile")
+   /**
+    * Javadoc comment
+    */
    public String uploadMultiFileHandlerPOST(Model model,
          @ModelAttribute("myUploadForm") MyUploadForm myUploadForm) {
 

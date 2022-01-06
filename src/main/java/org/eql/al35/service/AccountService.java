@@ -24,15 +24,27 @@ import org.eql.al35.repository.UserTypeIRepo;
 public class AccountService implements AccountIService {
 
 	@Autowired
+	/**
+	* Javadoc comment
+	*/
 	private UserIRepository userRepository;
 
 	@Autowired
+	/**
+	* Javadoc comment
+	*/
 	private AddressIRepository addressRepository;
 
 	@Autowired
+	/**
+	* Javadoc comment
+	*/
 	private GenderIRepository genderRepository;
 
 	@Autowired
+	/**
+	* Javadoc comment
+	*/
 	UserTypeIRepo userTypeRepository;
 
 	@Override

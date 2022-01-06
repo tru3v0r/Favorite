@@ -22,6 +22,9 @@ Class cointaining main from which app launches
 	private static Logger log = LoggerFactory.getLogger(
 			FavoriteApplication.class);
 
+	/**
+	 * Javadoc comment
+	 */
 	public static void main(final String[] args) {
 		SpringApplication.run(FavoriteApplication.class, args);
 	}

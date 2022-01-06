@@ -37,36 +37,69 @@ import org.eql.al35.repository.VatIRepository;
 public class CommandService implements CommandIService {
 
 	@Autowired
+	/**
+	* Javadoc comment
+	*/
 	CommandIRepository cmdRepo;
 
 	@Autowired
+	/**
+	* Javadoc comment
+	*/
 	StatusIRepository statusRepo;
 
 	@Autowired
+	/**
+	* Javadoc comment
+	*/
 	VatIRepository vatRepo;
 
 	@Autowired
+	/**
+	* Javadoc comment
+	*/
 	AddressIRepository addressRepo;
 
 	@Autowired
+	/**
+	* Javadoc comment
+	*/
 	CityIRepository cityRepo;
 
 	@Autowired
+	/**
+	* Javadoc comment
+	*/
 	PayModeIRepository payModeRepo;
 
 	@Autowired
+	/**
+	* Javadoc comment
+	*/
 	ArticleIRepository articleRepo;
 
 	@Autowired
+	/**
+	* Javadoc comment
+	*/
 	CustomIRepository customRepo;
 
 	@Autowired
+	/**
+	* Javadoc comment
+	*/
 	UserIRepository userRepo;
 
 	@Autowired
+	/**
+	* Javadoc comment
+	*/
 	StockIRepository stockRepo;
 
 	@Autowired
+	/**
+	* Javadoc comment
+	*/
 	ProductIRepository productRepo;
 
 	@Override
@@ -92,7 +125,7 @@ public class CommandService implements CommandIService {
 
 	private void setInfosCommand(Command command) {
 		Optional<Vat> vat = vatRepo.findById(5); //en dur global pour la command, a modifier pour chaque article plus tard
-		if(vat.isPresent()) {
+		if (vat.isPresent()) {
 			command.setVat(vat.get());
 			command.setTaxInPrice(command.getTaxOutPrice() + command.getTaxOutPrice()*vat.get().getRate());
 			command.setCreationDate(LocalDateTime.now());

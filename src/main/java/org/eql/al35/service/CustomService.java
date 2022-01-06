@@ -17,8 +17,14 @@ import org.eql.al35.repository.ProductTypeLocationIRepository;
 public class CustomService implements CustomIService {
 
 	@Autowired
+	/**
+	* Javadoc comment
+	*/
 	private ProductTypeLocationIRepository productTypeLocationRepo;
 	@Autowired
+	/**
+	* Javadoc comment
+	*/
 	private DesignIRepository designRepo;
 
 	@Override
@@ -27,7 +33,7 @@ public class CustomService implements CustomIService {
 		Optional<ProductTypeLocation> productType = productTypeLocationRepo.findById(idLocation);
 		custom.setProductTypeLocation(productType.isPresent() ? productType.get() : null);
 		Optional<Design> design = designRepo.findById(idDesign);
-		if(design.isPresent()) {
+		if (design.isPresent()) {
 			custom.setDesign(design.get());
 			custom.setPrice(design.get().getPrice());
 		}

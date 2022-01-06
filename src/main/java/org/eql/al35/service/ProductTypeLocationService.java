@@ -15,6 +15,9 @@ import org.eql.al35.repository.ProductTypeLocationIRepository;
 public class ProductTypeLocationService implements ProductTypeLocationIService {
 
     @Autowired
+	/**
+	* Javadoc comment
+	*/
     private ProductTypeLocationIRepository productTypeLocationIRepository;
 
     @Override

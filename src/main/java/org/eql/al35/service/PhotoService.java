@@ -22,9 +22,15 @@ import org.eql.al35.repository.ProductIRepository;
 @Transactional
 public class PhotoService implements PhotoIService {
 	@Autowired
+	/**
+	* Javadoc comment
+	*/
 	PhotoIRepository photoRepo;
 
 	@Autowired
+	/**
+	* Javadoc comment
+	*/
 	ProductIRepository productRepo;
 
 	@Override
@@ -33,12 +39,12 @@ public class PhotoService implements PhotoIService {
 		Photo photo = new Photo(id, pathPhoto, descriptionPhoto, null, null);
 		Optional<Product> optionalProduct = productRepo.findById(productId);
 		Product product = null;
-		if(optionalProduct.isPresent()) {
+		if (optionalProduct.isPresent()) {
 			product = optionalProduct.get();
 			Set<Photo> photos = product.getPhotos();
 			List<Photo> listPhoto = new ArrayList<>(photos);
 			for(int i = 0; i < listPhoto.size(); i++) {
-				if(i ==index) {
+				if (i ==index) {
 					listPhoto.set(index, photo);
 				}
 			}

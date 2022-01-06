@@ -26,12 +26,21 @@ public class PaymentController {
 	static Logger log = LoggerFactory.getLogger(PaymentController.class);
 
 	@Autowired
+	/**
+	* Javadoc comment
+	*/
 	CommandIService cmdService;
 
 	@Autowired
+	/**
+	* Javadoc comment
+	*/
 	AccountIService accountService;
 
 	@GetMapping("/payment")
+	/**
+	 * Javadoc comment
+	 */
 	public String displayPayment(Model model, HttpSession session) {
 		Command command = new Command();
 		model.addAttribute("command", command);
@@ -39,6 +48,9 @@ public class PaymentController {
 	}
 
 	@PostMapping("/newCommand")
+	/**
+	 * Javadoc comment
+	 */
 	public String createNewCommand(Model model, HttpSession session,
 			@ModelAttribute("command") Command command) {
 		Cart sessionCart = (Cart) session.getAttribute("sessionCart");

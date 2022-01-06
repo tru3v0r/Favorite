@@ -11,6 +11,9 @@ import org.eql.al35.repository.StockIRepository;
 public class StockService implements StockIService {
 
 	@Autowired
+	/**
+	* Javadoc comment
+	*/
 	private StockIRepository stockRepository;
 
 	@Override

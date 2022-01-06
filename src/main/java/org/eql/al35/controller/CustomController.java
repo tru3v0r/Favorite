@@ -18,13 +18,23 @@ import org.eql.al35.iservice.ProductIService;
 public class CustomController {
 
 	@Autowired
+	/**
+	* Javadoc comment
+	*/
 	private ProductIService productService;
+
 	@Autowired
+	/**
+	* Javadoc comment
+	*/
 	private DesignIService designService;
 	private Size size;
 	private Integer quantity;
 
 	@PostMapping("/generateCustom")
+	/**
+	 * Javadoc comment
+	 */
 	public String displayGenrateCustom(@ModelAttribute("article") Article article, @RequestParam("idProduct") Integer idProduct,
 			 Model model) {
 
@@ -36,6 +46,9 @@ public class CustomController {
 	}
 
 	@GetMapping("/custom/{category}/{id}")
+	/**
+	 * Javadoc comment
+	 */
 	public String displayCustom(@PathVariable String category, @PathVariable Integer id, Model model) {
 
 		Article article = new Article();

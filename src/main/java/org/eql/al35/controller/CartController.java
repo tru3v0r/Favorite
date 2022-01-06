@@ -26,21 +26,33 @@ public class CartController {
 
 
 	@Autowired
+	/**
+	* Javadoc comment
+	*/
 	private CartIService cartService;
 	@Autowired
+	/**
+	* Javadoc comment
+	*/
 	private ArticleIService articleService;
 	@Autowired
+	/**
+	* Javadoc comment
+	*/
+
 	private CustomIService customService;
 
 	private static final String SESSION_CART = "sessionCart";
-
 	@PostMapping("/addToCart")
+	/**
+	 * Javadoc comment
+	 */
 	public String displayAddToCart(@ModelAttribute("article") Article article, @RequestParam("idProduct") Integer idProduct,
 			HttpSession session) {
 
 		articleService.addProduit(idProduct, article);
 
-		if(!cartService.enoughInStock(article, article.getProduct())){
+		if (!cartService.enoughInStock(article, article.getProduct())){
 			return "noMoreStock";
 		}
 
@@ -52,6 +64,9 @@ public class CartController {
 	}
 
 	@PostMapping("/addCustomArticleToCart")
+	/**
+	 * Javadoc comment
+	 */
 	public String displayAddCustomArticleToCart(@ModelAttribute("article") Article article, @RequestParam("idProduct") Integer idProduct,
 			@RequestParam("idCustom1") Integer idCustom1 ,
 			@RequestParam("idCustom2") Integer idCustom2, @RequestParam("idCustom3") Integer idCustom3,
@@ -78,6 +93,9 @@ public class CartController {
 	}
 
 	@GetMapping("/cart")
+	/**
+	 * Javadoc comment
+	 */
 	public String displayCart( Model model,
 			HttpSession session) {
 
@@ -90,6 +108,9 @@ public class CartController {
 	}
 
 	@PostMapping("/cart")
+	/**
+	 * Javadoc comment
+	 */
 	public String displayDeleteArticle(@RequestParam("index") Integer index, HttpSession session) {
 		Cart sessionCart = (Cart) session.getAttribute(SESSION_CART);
 		cartService.removeArticle(sessionCart, index);

@@ -19,11 +19,17 @@ import org.eql.al35.iservice.CommandIService;
 public class CommandController {
 
 	@Autowired
+	/**
+	* Javadoc comment
+	*/
 	private CommandIService commandService;
 
 	List<Command> commands = new ArrayList<>();
 
 	@GetMapping("/myOrders")
+	/**
+	 * Javadoc comment
+	 */
 	public String userCommands(Model model, HttpSession session) {
 		User sessionUser = (User) session.getAttribute("sessionUser");
 		commands = commandService.findByUser(sessionUser.getId());
@@ -33,6 +39,9 @@ public class CommandController {
 	}
 
 	@GetMapping("/order/{id}")
+	/**
+	 * Javadoc comment
+	 */
 	public String displayCommand(@PathVariable Integer id, Model model, HttpSession session) {
 		String retour = "";
 		User sessionUser = (User) session.getAttribute("sessionUser");

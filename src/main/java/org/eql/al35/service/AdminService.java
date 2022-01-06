@@ -27,21 +27,39 @@ import org.eql.al35.repository.VatIRepository;
 public class AdminService implements AdminIService {
 
 	@Autowired
+	/**
+	* Javadoc comment
+	*/
 	StatusIRepository statusRepo;
 
 	@Autowired
+	/**
+	* Javadoc comment
+	*/
 	UserIRepository userRepo;
 
 	@Autowired
+	/**
+	* Javadoc comment
+	*/
 	GenderIRepository genderRepo;
 
 	@Autowired
+	/**
+	* Javadoc comment
+	*/
 	UserTypeIRepo userTypeRepo;
 
 	@Autowired
+	/**
+	* Javadoc comment
+	*/
 	VatIRepository vatRepo;
 
 	@Autowired
+	/**
+	* Javadoc comment
+	*/
 	PayModeIRepository payModeRepo;
 
 	@Override
@@ -70,7 +88,7 @@ public class AdminService implements AdminIService {
 		Optional<User> optionnalUser = userRepo.findById(id);
 		User existingUser = new User();
 
-		if(optionnalUser.isPresent()) {
+		if (optionnalUser.isPresent()) {
 			existingUser = optionnalUser.get();
 			existingUser.setId(user.getId());
 			existingUser.setName(user.getName());
