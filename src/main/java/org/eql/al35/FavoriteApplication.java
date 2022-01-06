@@ -15,8 +15,11 @@ import org.springframework.context.event.EventListener;
 
 @SpringBootApplication
 public class FavoriteApplication {
+	/*
+	Class cointaining main from which app launches
+	 */
 
-	static Logger log = LoggerFactory.getLogger(FavoriteApplication.class);
+	private static Logger log = LoggerFactory.getLogger(FavoriteApplication.class);
 
 	public static void main(String[] args) {
 		SpringApplication.run(FavoriteApplication.class, args);
@@ -30,14 +33,14 @@ public class FavoriteApplication {
 
 	public static void openBrowser(String url) {
 
-	    if(Desktop.isDesktopSupported()){
+	    if (Desktop.isDesktopSupported()){
 	        Desktop desktop = Desktop.getDesktop();
 	        try {
 	            desktop.browse(new URI(url));
 	        } catch (IOException | URISyntaxException e) {
 	            log.error(e.getMessage());
 	        }
-	    }else{
+	    } else {
 	        Runtime runtime = Runtime.getRuntime();
 	        try {
 	            runtime.exec("rundll32 url.dll,FileProtocolHandler " + url);
