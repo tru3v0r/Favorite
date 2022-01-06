@@ -19,9 +19,10 @@ public class FavoriteApplication {
 Class cointaining main from which app launches
  */
 
-	private static Logger log = LoggerFactory.getLogger(FavoriteApplication.class);
+	private static Logger log = LoggerFactory.getLogger(
+			FavoriteApplication.class);
 
-	public static void main(String[] args) {
+	public static void main(final String[] args) {
 		SpringApplication.run(FavoriteApplication.class, args);
 	}
 
