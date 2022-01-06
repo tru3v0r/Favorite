@@ -33,10 +33,10 @@ Class cointaining main from which app launches
 	    openBrowser("http://localhost:8085/home");
 	}
 
+	/**
+	 * Opens the app in default browser
+	 */
 	public static void openBrowser(final String url) {
-		/**
-		 * Opens the app in default browser
-		 */
 	    if (Desktop.isDesktopSupported()) {
 	        Desktop desktop = Desktop.getDesktop();
 	        try {
